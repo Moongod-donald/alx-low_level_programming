@@ -9,25 +9,25 @@ int main(void)
 {
 	int i, j;
 
-	i = 48;
-	j = 49;
-	while (i <= 56)
+	for (i = 48; i <= 56; i++)
 	{
-		while (j <= 57)
+		for (j = 49; j <= 57; j++)
 		{
-			if (!(j <= i))
+			if (i >= j)
+			{
+				continue;
+			}
+			else
 			{
 				putchar(i);
 				putchar(j);
-				if ((i != 56) && (j != 57))
+				if (!((i == 56) && (j == 57)))
 				{
 					putchar(',');
 					putchar(' ');
 				}
 			}
-			j++;
 		}
-		i++;
 	}
 	putchar('\n');
 
