@@ -2,6 +2,7 @@
 
 /**
  * _abs - coverts value to absolute
+ * @c: accepts value and uses it to do the conversion
  *
  * Return: Always 0 (Success)
  */
