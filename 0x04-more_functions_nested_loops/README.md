@@ -1,1 +1,5 @@
-This directory contains the answer to the questions given to me at ALX school.
+# More on Functions and Nested Loops
+This repo contains more answers to questions of my project at the Holberton Software engineering school. Fell free to check and clone if needs be.
+
+Written by:
+Donald.

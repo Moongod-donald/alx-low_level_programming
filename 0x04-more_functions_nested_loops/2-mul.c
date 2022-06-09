@@ -1,19 +1,12 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * mul - multiplies two ints
- * @a: first int
- * @b: second int
- *
+ * mul - multiplies two integer parameters together
+ * @a: the first parameter for multiplication
+ * @b: the second parameter for multiplication
  * Return: Always 0 (Success)
  */
 int mul(int a, int b)
 {
-	int mul = a * b;
-
-
-	printf("%d", mul);
-
-	return (0);
+	return (a * b);
 }
