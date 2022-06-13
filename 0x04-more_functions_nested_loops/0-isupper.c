@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * _isupper - checks if alpha is uppercase
- * @c: accepts a parameter
- *
- * Return: 1 or 0.
+ * _isupper - checks if alphabet or char
+ * is either in lowercase or uppercase
+ * @c: accepts parameter c is arg
+ * Return: 0 if lowercase and 1 if otherwise
  */
 int _isupper(int c)
 {
@@ -12,6 +12,9 @@ int _isupper(int c)
 	{
 		return (1);
 	}
-	else
+	if (c >= 97 && c <= 122)
+	{
 		return (0);
+	}
+	return (0);
 }

@@ -1,22 +1,25 @@
 #include "main.h"
 
 /**
- * print_most_numbers - a function that prints most numbers
- *
- * Return: void (success)
+ * print_most_numbers - prints all single digit number
+ * except 2 and 4
+ * Return: Always 0 (Success);
  */
 void print_most_numbers(void)
 {
-	int num;
+	int i;
 
-	for (num = 48; num <= 57; num++)
+	for (i = 48; i <= 57; i++)
 	{
-		if ((num == 50) || (num == 52))
+		if (i == 50)
 		{
 			continue;
 		}
-		else
-			_putchar(num);
+		else if (i == 52)
+		{
+			continue;
+		}
+		_putchar(i);
 	}
 	_putchar('\n');
 }
