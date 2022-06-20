@@ -4,6 +4,7 @@
  * _memcpy - copy n bytes from src into dest
  * @dest: destination of the string to be copied
  * @src: source of the string
+ * @n: amount in bytes to be copies fro src
  *
  * Return: char.
  */
