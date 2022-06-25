@@ -5,7 +5,7 @@
  * @argc: counts the arrays (int)
  * @argv: poniter array to char pointer
  *
- * Return : Always 0.
+ * Return: Always 0.
  */
 int main(int argc __attribute__((unused)), char *argv[])
 {
