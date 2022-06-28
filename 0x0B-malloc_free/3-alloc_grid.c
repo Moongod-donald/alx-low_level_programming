@@ -1,42 +1,45 @@
-#include "main.h"
 #include <stdlib.h>
+#include "holberton.h"
 
 /**
- * **alloc_grid - function that returns a 2 dimen array of int
- * @width: width of the array
- * @height: hwight of the array
+ * **alloc_grid - creates a two dimensional array of ints
+ * @width: width of the matrix
+ * @height: height of the matrix
  *
- * Return: int.
+ * Return: pointer to the created matrix (Success)
+ * or NULL (Error)
  */
 int **alloc_grid(int width, int height)
 {
+	int **array;
 	int i, j;
-	int **dimen;
 
-	if (width <= 0 || height <= 0)
-	{
+	if (height <= 0 || width <= 0)
 		return (NULL);
-	}
-	dimen = (int **) malloc(sizeof(int) * height);
 
-	if (dimen == NULL)
+	array = (int **) malloc(sizeof(int *) * height);
+
+	if (array == NULL)
 		return (NULL);
+
 	for (i = 0; i < height; i++)
 	{
-		dimen[i] = (int *) malloc(sizeof(int) * width);
-		if (dimen[i] == NULL)
+		array[i] = (int *) malloc(sizeof(int) * width);
+		if (array[i] == NULL)
 		{
-			free(dimen);
+			free(array);
 			for (j = 0; j <= i; j++)
-				free(dimen[j]);
+				free(array[j]);
+			return (NULL);
 		}
 	}
+
 	for (i = 0; i < height; i++)
 	{
 		for (j = 0; j < width; j++)
 		{
-			dimen[i][j] = 0;
+			array[i][j] = 0;
 		}
 	}
-	return (dimen);
+	return (array);
 }
