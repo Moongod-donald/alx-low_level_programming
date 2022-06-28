@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * alloc_grid - frees the two dimen function
+ * free_grid - frees the two dimen function
  * @grid: grid
  * @height: height of the grid
  *
