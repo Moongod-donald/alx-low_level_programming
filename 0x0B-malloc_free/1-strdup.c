@@ -17,12 +17,8 @@ char *_strdup(char *str)
 		len++;
 	}
 
-	if (len == 0)
-	{
-		return (NULL);
-	}
+	str1 = malloc(sizeof(char) * len + 1);
 
-	str1 = malloc(sizeof(char) * len);
 	if (str1 != NULL)
 	{
 		for (i = 0; i < len; i++)
@@ -30,6 +26,8 @@ char *_strdup(char *str)
 			str1[i] = str[i];
 		}
 	}
+	else
+		return (NULL);
 
 	return (str1);
 }
